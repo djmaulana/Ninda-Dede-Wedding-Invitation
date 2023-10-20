@@ -124,33 +124,33 @@ const Hero = () => {
                 <div className="border-y-2 border-l-2 p-1">
                   <p>
                     {days} <br />
-                    <div className={alex.className}> 
+                    <span className={alex.className}> 
                       Days
-                    </div> 
+                    </span> 
                   </p>
                 </div>
                 <div className="border-y-2 border-l-2  p-1">
                   <p>
                     {hours} <br />
-                    <div className={alex.className}> 
+                    <span className={alex.className}> 
                       Hours
-                    </div> 
+                    </span> 
                   </p>
                 </div>
                 <div className="border-y-2 border-l-2  p-1">
                   <p>
                     {minutes} <br />
-                    <div className={alex.className}> 
+                    <span className={alex.className}> 
                       Minutes
-                    </div> 
+                    </span> 
                   </p>
                 </div>
                 <div className="border-2 rounded-r-full p-1">
                   <p>
                     {seconds} <br />
-                    <div className={alex.className}> 
+                    <span className={alex.className}> 
                       Second
-                    </div> 
+                    </span> 
                   </p>
                 </div>
               </div>
