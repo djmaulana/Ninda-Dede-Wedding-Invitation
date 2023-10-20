@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 
-const inter = Montserrat({ weight: '400', subsets: 'latin', preload: false })
+const inter = Montserrat({ weight: '400', subsets: ["latin"], preload: false })
 
 export const metadata: Metadata = {
   title: 'Ninda&Dede Wedding Invitation',
