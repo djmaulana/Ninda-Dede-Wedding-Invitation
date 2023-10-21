@@ -22,7 +22,7 @@ const Thankyou = () => {
                 alt='img'
                 width={150}
                 height={50}
-                className='mx-auto rounded-full mt-5' 
+                className='mx-auto rounded-full mt-5'  
             />
             <hr className='border-1 border-gray-400 w-1/3 mx-auto mt-5'/>
             <p className='text-sm mt-3 mx-8'>It is an honor and happiness for us, if you are willing to attend and give your blessing. For your presence and blessings, we thank you.</p>

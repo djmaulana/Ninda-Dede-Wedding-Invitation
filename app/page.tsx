@@ -1,6 +1,7 @@
 'use client'
-import { Content, Footer, Hero, Location, Navbar, SaveTheDay, Slideshow, Thankyou } from '@/components'
+import { Content, Footer, Hero, Location, Music, Navbar, SaveTheDay, Slideshow, Thankyou } from '@/components'
 import Amplop from '@/components/Amplop';
+import Message from '@/components/Message';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from 'react';
@@ -35,6 +36,7 @@ export default function Home() {
       <div data-aos='zoom-in'>
         <Location />
       </div>
+      <Message />
       <Thankyou />
     </main>
   )

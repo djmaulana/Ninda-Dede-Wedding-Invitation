@@ -7,6 +7,7 @@ import Countdown from './Countdown'
 import Slideshow from './Slideshow'
 import Thankyou from './Thankyou'
 import SaveTheDay from './SaveTheDay'
+import Music from './Music'
 
 export {
     Hero,
@@ -17,5 +18,6 @@ export {
     Countdown,
     Slideshow,
     Thankyou,
-    SaveTheDay
+    SaveTheDay,
+    Music
 }

@@ -22,9 +22,9 @@ const save = () => {
         <Image
           src='/hero.jpg'
           alt='img'
-          width={500}
+          width={1000}
           height={500} 
-          className=''
+          className='saturate-0'
         /> 
       </div>
       <div className='z-10 mx-auto relative text-white'>
@@ -33,7 +33,7 @@ const save = () => {
         </div>
         <p className='text-[12px] mx-10'>"And We created everything in pairs so that you may remember (the greatness of Allah)."</p>
         <p className='text-[10px] mt-3'>(QS. Az Zariyat: 49)</p>
-        <div className='w-80 h-40 bg-black rounded-[20px] bg-opacity-90 mx-auto mt-10 p-5' data-aos='zoom-in'>
+        <div className='w-80 h-40 bg-black rounded-[20px] bg-opacity-90 mx-auto mt-14 p-5' data-aos='zoom-in'>
           <div className={alex.className}>
             <h1 className='text-[40px]' data-aos='fade-up'>Akad Nikah</h1>
           </div>

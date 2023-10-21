@@ -1,15 +1,23 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { ArrowLeftIcon,ArrowRightIcon } from '@heroicons/react/24/solid'
 import { Alex_Brush } from 'next/font/google';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const alex = Alex_Brush({weight:'400', preload: false})
 
 
 const Slideshow = () => {
 
+	useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          once: false,
+        })
+      })
   const images = [
     '/img-1.jpg',
     '/img-2.jpg',
@@ -37,9 +45,9 @@ const Slideshow = () => {
   return (
     <div className="px-5 mt-5">
       <div className={alex.className}>
-        <h1 className='text-[60px] text-center'>Our Galleries</h1>
+        <h1 className='text-[60px] text-center' data-aos='fade-right'>Our Galleries</h1>
       </div>
-			<Slide {...zoomInProperties}>
+			<Slide {...zoomInProperties} data-aos='zoom-in'>
 				{images.map((each, index) => (
 					<div key={index} className="flex justify-center md:h-screen md:items-center items-start w-screen relative">
 						<img

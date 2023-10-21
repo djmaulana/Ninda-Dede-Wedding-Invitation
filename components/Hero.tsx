@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Alex_Brush } from "next/font/google";
 import { useState, useEffect } from "react";
-import { Slideshow } from ".";
+import { Music, Slideshow } from ".";
 
 const alex = Alex_Brush({ weight: "400", preload: false });
 
@@ -58,13 +58,14 @@ const Hero = () => {
         />
       </div>
       <div className="relative z-10 flex flex-col items-center text-center justify-center h-full">
+          <Music />
           <div className={alex.className}>
             <h1 className='text-[60px] md:text-[120px] text-white'>
               Ninda & Dede
             </h1>
           </div>
           <p className='font-regular tracking-tighter sm:text-[16px] md:text-[24px] text-white'>
-            Are Getting Merried
+            Are Getting Married
           </p>
           <div className={alex.className}>
             <div className="bg-[#474747] mt-[40px] py-2 px-4 md:hidden block rounded-full disabled: text-white text-[18px]">

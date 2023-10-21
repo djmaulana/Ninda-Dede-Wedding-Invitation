@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Montserrat({ weight: '400', subsets: ["latin"], preload: false })
 
 export const metadata: Metadata = {
-  title: 'Ninda&Dede Wedding Invitation',
-  description: 'Wedding invitation for Ninda & Dede wish Sakinah Mawadah & Warohmah',
+  title: 'Ninda & Dede Wedding Invitation',
+  description: 'Wedding invitation from Ninda & Dede wish Sakinah Mawadah & Warohmah',
 }
 
 export default function RootLayout({
