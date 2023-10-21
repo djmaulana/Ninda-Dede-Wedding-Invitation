@@ -5,6 +5,8 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Countdown from './Countdown'
 import Slideshow from './Slideshow'
+import Thankyou from './Thankyou'
+import SaveTheDay from './SaveTheDay'
 
 export {
     Hero,
@@ -14,4 +16,6 @@ export {
     Navbar,
     Countdown,
     Slideshow,
+    Thankyou,
+    SaveTheDay
 }
