@@ -29,7 +29,6 @@ export default function Home() {
         />
       </div>
       <SaveTheDay />
-      <Amplop />
       <div data-aos='zoom-in'>
         <Slideshow />
       </div>
@@ -37,6 +36,7 @@ export default function Home() {
         <Location />
       </div>
       <Message />
+      <Amplop />
       <Thankyou />
     </main>
   )
