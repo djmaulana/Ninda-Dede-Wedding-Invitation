@@ -34,7 +34,7 @@ const Message = () => {
   };
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
-  const currentComments = users.slice(indexOfFirstComment, indexOfLastComment);
+  const currentComments = Array.from(users).slice(indexOfFirstComment, indexOfLastComment);
 
   const paginate = (pageNumber: any) => {
     setCurrentPage(pageNumber);
@@ -133,18 +133,6 @@ const Message = () => {
                     </div>
                     )}
                 </div>
-                {/* <div className='bg-black px-2 py-5 opacity-9 rounded-[15px] mx-auto' data-aos='zoom-in'>
-                    <h1 className='text-white mb-3 text-[18px]' data-aos='zoom-in'>Message Form</h1>
-                    <div className='felx-row flex'>
-                        <p className='text-white text-sm mr-9' data-aos='zoom-in'>Name</p>
-                        <input type="text" data-aos='zoom-in' className='rounded-[5px] px-2'/>
-                    </div>
-                    <div className='felx-row flex mt-2'>
-                        <p className='text-white text-sm mr-4' data-aos='zoom-in'>Message</p>
-                        <input type="text" data-aos='zoom-in' className='rounded-[5px] px-2 py-4'/>
-                    </div>
-                    <button type='button' onClick={handleSubmit} className='text-black font-normal hover:bg-gray-300 text-sm mt-5 bg-white rounded-full px-3 py-1'>Submit</button>
-                </div> */}
             </div>
         </div>
   )
