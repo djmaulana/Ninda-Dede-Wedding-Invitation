@@ -90,9 +90,7 @@ const Message = () => {
         setUsers(savedComments);
         }
     }, []);
-    useEffect(() => {
-        localStorage.clear();
-    })
+
 
     return (
         <div className='text-center relative'>
