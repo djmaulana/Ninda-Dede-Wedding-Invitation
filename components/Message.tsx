@@ -3,6 +3,11 @@ import { Alex_Brush } from 'next/font/google'
 import Swal from 'sweetalert2'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { usersDummy } from '@/types'
+
+const obj: Record<string, number | boolean> = { a: 1, b: 2, c: 3 };
+const arr: { key: string; value: number | boolean }[] = Object.keys(obj).map((key) => ({ key, value: obj[key] }));
+console.log(arr);
 
 const alex = Alex_Brush({weight:'400', preload: false})
 
@@ -34,45 +39,48 @@ const Message = () => {
   };
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
-  const currentComments = Array.from(users).slice(indexOfFirstComment, indexOfLastComment);
+  const currentComments = Array.from(usersDummy).slice(indexOfFirstComment, indexOfLastComment);
 
   const paginate = (pageNumber: any) => {
     setCurrentPage(pageNumber);
   };
 
   const initialRender = useRef(true);
-
+  useEffect(() => {
+    //   setUsers((prevUsers) => [...prevUsers, ...usersDummy])
+  })
   
     useEffect(() => {
         AOS.init({
           duration: 1000,
           once: false,
         })
-        const totalComments = users.length;
+        const totalComments = usersDummy.length;
         const totalPages = Math.ceil(totalComments / commentsPerPage);
         if (totalPages < visiblePages) {
         setVisiblePages(totalPages);
         }
       })
     
+
     useEffect(() => {
-        const totalComments = users.length;
+        const totalComments = usersDummy.length;
         const totalPages = Math.ceil(totalComments / commentsPerPage);
         if (totalPages < visiblePages) {
         setVisiblePages(totalPages);
         }
-    }, [users, commentsPerPage, visiblePages]);
+    }, [usersDummy, commentsPerPage, visiblePages]);
 
-    // Save comments to localStorage whenever the 'users' state changes
+    // Save comments to localStorage whenever the 'usersDummy' state changes
     useEffect(() => {
         if (initialRender.current) {
             initialRender.current = false;
             return;
         }
-        if (users.length !== 0){
-            window.localStorage.setItem("comments", JSON.stringify(users));
+        if (usersDummy.length !== 0){
+            window.localStorage.setItem("comments", JSON.stringify(usersDummy));
         }
-    }, [users]);
+    }, [usersDummy]);
 
 
     // Load saved comments from localStorage when the component mounts
@@ -82,6 +90,9 @@ const Message = () => {
         setUsers(savedComments);
         }
     }, []);
+    useEffect(() => {
+        localStorage.clear();
+    })
 
     return (
         <div className='text-center relative'>
@@ -118,16 +129,16 @@ const Message = () => {
                     </form>
                     <div className="mt-6">
                         <hr className='border-1 border-gray-300 mb-5'/>
-                        {currentComments.map((user, index) => (
+                        {currentComments.map((user: any, index: any) => (
                         <div key={index} className="bg-gray-100 text-left p-4 mt-2 rounded-[10PX]">
                             <p className='text-sm'><strong>Name:</strong> {user.name}</p>
                             <p className='text-sm'><strong>Message:</strong> {user.message}</p>
                         </div>
                         ))}
                     </div>
-                    {users.length > commentsPerPage && (
+                    {usersDummy.length > commentsPerPage && (
                         <div className="mt-4 flex justify-center">
-                        {Array.from({ length: Math.ceil(users.length / commentsPerPage) }, (_, i) => (
+                        {Array.from({ length: Math.ceil(usersDummy.length / commentsPerPage) }, (_, i) => (
                             <button key={i} onClick={() => paginate(i + 1)} className={`mx-1 p-2 ${i + 1 === currentPage ? 'bg-gray-200 rounded text-black text-sm' : 'text-sm bg-gray-200 rounded'}`}>{i + 1}</button>
                         ))}
                     </div>

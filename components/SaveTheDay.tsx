@@ -24,7 +24,7 @@ const save = () => {
           alt='img'
           width={1000}
           height={500} 
-          className='saturate-0'
+          className='saturate-0 mx-auto'
         /> 
       </div>
       <div className='z-10 mx-auto relative text-white'>

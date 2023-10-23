@@ -54,7 +54,7 @@ const Hero = () => {
             src="/hero_mobile.jpg"
             alt="background image"
             fill
-            className="md:hidden saturate-0"
+            className="md:hidden saturate-0 bg-cover"
         />
       </div>
       <div className="relative z-10 flex flex-col items-center text-center justify-center h-full">
