@@ -1,20 +1,20 @@
 import  Box  from "@chakra-ui/react";
 import type { NextComponentType } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Typewriter from "typewriter-effect";
 
 
 const Music = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audio = new Audio('audio/music.mp3');
-
-  audio.loop = true;
+  const audio = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("audio/music.mp3") : undefined
+  );
 
   const togglePlay = () => {
     if (isPlaying) {
-      audio.pause();
+      audio.current?.pause();
     } else {
-      audio.play();
+      audio.current?.play();
     }
     setIsPlaying(!isPlaying);
   };
