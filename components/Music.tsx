@@ -4,22 +4,27 @@ import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 
-const Music: NextComponentType = () => {
-      const handleClick = () => {
-        const audio = document.querySelector('audio') as HTMLAudioElement;
-        audio.volume = 0.7;
-        document.body.addEventListener("mousemove", function() {
-          audio.play();
-        })
-      }
-    
-      return (
-        <div className="fixed z-30 bottom-0 right-0">
-          <audio preload="auto" loop>
-              <source src="audio/music.mp3" type="audio/mpeg" />
-          </audio>
-        </div>
-      );
-};
+const Music = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audio = new Audio('audio/music.mp3');
 
-export default Music;
+  audio.loop = true;
+
+  const togglePlay = () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+  return (
+    <div className="fixed abosute bottom-0 z-50 right-0 mr-5 mb-5">
+      <button onClick={togglePlay} className="bg-black py-2 px-2 rounded-full text-white text-[9px]">
+        {isPlaying ? 'Pause Music' : 'Play Music'}
+      </button>
+    </div>
+  );
+}
+
+export default Music

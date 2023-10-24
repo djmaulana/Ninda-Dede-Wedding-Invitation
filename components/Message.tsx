@@ -5,10 +5,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { usersDummy } from '@/types'
 
-const obj: Record<string, number | boolean> = { a: 1, b: 2, c: 3 };
-const arr: { key: string; value: number | boolean }[] = Object.keys(obj).map((key) => ({ key, value: obj[key] }));
-console.log(arr);
-
 const alex = Alex_Brush({weight:'400', preload: false})
 
 const Message = () => {
