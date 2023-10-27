@@ -52,7 +52,7 @@ export default function Home() {
               className="md:hidden saturate-0 bg-cover"
           />
         </div>
-        <div className="relative z-10 flex flex-col p-5 text-left justify-end h-full">
+        <div className=" relative z-10 flex flex-col p-5 text-left justify-end h-full">
             {/* <Music /> */}
             <h1 className="text-white">THE WEDDING OF</h1>
             <div className={alex.className}>
@@ -68,7 +68,7 @@ export default function Home() {
                 <Link 
                   href='/invitation'
                 >
-                  <button onClick={handelMusic} className="bg-[#474747] mt-[40px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                  <button onClick={handelMusic} className="bg-[#474747] my-[50px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
                     Buka Undangan
                   </button>
                 </Link>
