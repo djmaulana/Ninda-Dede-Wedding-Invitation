@@ -58,7 +58,7 @@ const Hero = () => {
         />
       </div>
       <div className="relative z-10 flex flex-col items-center text-center justify-center h-full">
-          <Music />
+          {/* <Music /> */}
           <div className={alex.className}>
             <h1 className='text-[60px] md:text-[120px] text-white'>
               Ninda & Dede

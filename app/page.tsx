@@ -1,12 +1,14 @@
 'use client'
-import { Content, Footer, Hero, Location, Music, Navbar, SaveTheDay, Slideshow, Thankyou } from '@/components'
-import Amplop from '@/components/Amplop';
-import Message from '@/components/Message';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import { useEffect } from 'react';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import { Alex_Brush } from 'next/font/google';
+import Link from 'next/link';
 // ..
 
+const alex = Alex_Brush({weight:'400', preload: false})
 // Ninda Aliyanda
 // Dede Saepul Dina
 
@@ -18,26 +20,62 @@ export default function Home() {
       once: false,
     })
   })
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audio = useRef<HTMLAudioElement | undefined>(
+    typeof Audio !== "undefined" ? new Audio("audio/music.mp3") : undefined
+  );
+  useEffect(() => {
+    audio.current?.loop
+  })
+  const handelMusic = () => {
+    if (isPlaying) {
+      audio.current?.pause();
+    } else {
+      audio.current?.play();
+    }
+    setIsPlaying(!isPlaying);
+  }
   return (
     <main className="overflow-hidden relative">
-      <Navbar />
-      <Hero />
-      <div className="relative">
-        <Content 
-          title = 'Greetings'
-          content= "As we gather to celebrate this remarkable day, we want to take a moment to express our deepest gratitude and extend our warmest greetings to each and every one of you. Your presence in our lives has been a constant source of love, support, and inspiration, and it is with immense joy that we welcome you to share in this momentous occasion. From the serendipitous encounters that led to our love story to the countless moments of laughter and shared experiences we've enjoyed with all of you, it is clear that our journey has been enriched by your friendship and love. Your support has been our anchor through life's ups and downs, and we are truly fortunate to have you by our side as we embark on this new chapter together. As we stand on the threshold of forever, we eagerly anticipate the memories we will create today and the moments we will share in the future. May this day be filled with love, laughter, and shared happiness, a reflection of the love that binds us all together. Here's to the moments we've cherished and the countless ones we have yet to create—cheers to all of us, and thank you for being an integral part of our lives and this beautiful celebration."
-        />
+      <div className='h-screen'>
+        <div className="absolute inset-0 mx-auto">
+          <Image
+              src="/hero-desktop.jpg"
+              alt="background image"
+              fill
+              className="md:block hidden"
+          />
+          <Image
+              src="/hero_mobile.jpg"
+              alt="background image"
+              fill
+              className="md:hidden saturate-0 bg-cover"
+          />
+        </div>
+        <div className="relative z-10 flex flex-col p-5 text-left justify-end h-full">
+            {/* <Music /> */}
+            <h1 className="text-white">THE WEDDING OF</h1>
+            <div className={alex.className}>
+              <h1 className='text-[40px] md:text-[120px] text-white'>
+                Ninda & Dede
+              </h1>
+            </div>
+            <p className='font-light text-sm tracking-tighter md:text-[24px] text-white'>
+              Kepada Bapak/Ibu/Saudara/i
+            </p>
+            <div className={alex.className}>
+              <div className="">
+                <Link 
+                  href='/invitation'
+                >
+                  <button onClick={handelMusic} className="bg-[#474747] mt-[40px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                    Buka Undangan
+                  </button>
+                </Link>
+              </div>
+            </div>
+        </div>
       </div>
-      <SaveTheDay />
-      <div data-aos='zoom-in'>
-        <Slideshow />
-      </div>
-      <div data-aos='zoom-in'>
-        <Location />
-      </div>
-      <Message />
-      <Amplop />
-      <Thankyou />
     </main>
   )
 }
