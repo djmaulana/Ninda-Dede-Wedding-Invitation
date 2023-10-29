@@ -18,7 +18,7 @@ const Amplop = () => {
         <div className={alex.className}>
             <h1 className='text-[60px]' data-aos='fade-right'>Amplop Digital</h1>
         </div>
-        <p className='text-sm mx-10' data-aos='fade-up'>Your Blessing Prayer is a gift that means a lot to us. And if giving is an expression of love You, you can give gifts cashless.</p>
+        <p className='text-sm mx-10' data-aos='fade-up'>Doa Berkat Anda adalah anugerah yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan cinta Anda, Anda bisa memberikan hadiah secara cashless.</p>
         <div className='mt-3 '>
             <div className='w-80 mx-auto h-44 bg-black bg-opacity-90 rounded-[20px] p-5' data-aos='zoom-in'>
                 <div className='flex flex-row relative'>

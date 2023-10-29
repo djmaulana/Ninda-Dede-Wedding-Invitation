@@ -20,15 +20,20 @@ const Slideshow = () => {
       })
   const images = [
     '/img-1.jpg',
+    '/img-6.jpg',
     '/img-2.jpg',
+    '/img-7.jpg',
     '/img-3.jpg',
+    '/img-8.jpg',
     '/img-4.jpg',
+    // '/img-5.jpg',
+	
   ]
 
   const zoomInProperties = {
 		scale: 1,
-		duration: 3000,
-		transitionDuration: 500,
+		duration: 1500,
+		transitionDuration: 300,
 		infinite: true,
 		prevArrow: (
 			<div className="ml-10 top-40 md:top-72">

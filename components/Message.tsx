@@ -36,8 +36,8 @@ const Message = () => {
         const response = await fetch('/api/getMessage');
         if (response.ok) {
           const data = await response.json();
-          setSubmittedData(data.pets.rows);
-          setUsers(data.pets.rows)
+          setSubmittedData(data);
+          setUsers(data)
         } else {
           console.error('Error fetching data.');
         }
@@ -124,7 +124,7 @@ const Message = () => {
             <div className={alex.className}>
                 <h1 className='text-[60px]' data-aos='fade-right'>Send Message</h1>
             </div>
-            <p className='text-md' data-aos='zoom-in'>Give Greetings & Prayers of Blessing</p>
+            <p className='text-md' data-aos='zoom-in'>Berikan Salam & Doa untuk Mempelai</p>
             <div className='w-screen h-1/2 mx-auto p-10'>
                 <div className="max-w-md mx-auto p-4 border border-gray-500 bg-black rounded-[20px]">
                     <h2 className="text-center text-2xl font-normal mb-10 mt-5 text-white" data-aos='fade-in'>Message Form</h2>
@@ -145,7 +145,7 @@ const Message = () => {
                             onChange={(e) => setIsConfirmed(e.target.checked)}
                             className="form-checkbox"
                             />
-                            <span className='text-sm' data-aos='zoom-in'>Confirm Presence at the Event</span>
+                            <span className='text-sm' data-aos='zoom-in'>Konfirmasi Kehadiran</span>
                         </label>
                         </div>
                         <div>

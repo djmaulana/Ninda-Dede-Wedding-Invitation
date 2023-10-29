@@ -31,7 +31,7 @@ const save = () => {
         <div className={alex.className}>
           <h1 className='text-[60px] mt-20'>Save The Day</h1>
         </div>
-        <p className='text-[12px] mx-10'>"And We created everything in pairs so that you may remember (the greatness of Allah)."</p>
+        <p className='text-[12px] mx-10'>"Dan Kami menciptakan segala sesuatu berpasangan agar kamu ingat (kebesaran Allah)."</p>
         <p className='text-[10px] mt-3'>(QS. Az Zariyat: 49)</p>
         <div className='w-80 h-40 bg-black rounded-[20px] bg-opacity-90 mx-auto mt-14 p-5' data-aos='zoom-in'>
           <div className={alex.className}>

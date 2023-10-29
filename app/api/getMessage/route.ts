@@ -1,9 +1,14 @@
-// pages/api/get-pets.ts
-
-import { sql } from '@vercel/postgres';
-import { NextResponse } from 'next/server';
-
-export async function GET(request: Request) {
-  const pets = await sql`SELECT * FROM Pets;`;
-  return NextResponse.json({ pets }, { status: 200 });
+import { createClient } from '@vercel/postgres';
+ 
+async function queryPosts() {
+  const client = createClient();
+  await client.connect();
+ 
+  try {
+    const likes = 100;
+    const { rows, fields } =
+      await client.sql`SELECT * FROM pets`;
+  } finally {
+    await client.end();
+  }
 }
