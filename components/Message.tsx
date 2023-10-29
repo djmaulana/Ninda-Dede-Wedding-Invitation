@@ -124,7 +124,7 @@ const Message = () => {
             <div className={alex.className}>
                 <h1 className='text-[60px]' data-aos='fade-right'>Send Message</h1>
             </div>
-            <p className='text-md' data-aos='zoom-in'>Berikan Salam & Doa untuk Mempelai</p>
+            <p className='text-sm' data-aos='zoom-in'>Berikan Salam & Doa untuk Mempelai</p>
             <div className='w-screen h-1/2 mx-auto p-10'>
                 <div className="max-w-md mx-auto p-4 border border-gray-500 bg-black rounded-[20px]">
                     <h2 className="text-center text-2xl font-normal mb-10 mt-5 text-white" data-aos='fade-in'>Message Form</h2>
