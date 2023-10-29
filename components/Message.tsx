@@ -145,7 +145,7 @@ const Message = () => {
                             onChange={(e) => setIsConfirmed(e.target.checked)}
                             className="form-checkbox"
                             />
-                            <span className='text-sm' data-aos='zoom-in'>Confirm Presence at the Event</span>
+                            <span className='text-sm' data-aos='zoom-in'>Konfirmasi Kehadiran</span>
                         </label>
                         </div>
                         <div>
