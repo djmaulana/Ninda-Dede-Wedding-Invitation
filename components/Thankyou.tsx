@@ -25,7 +25,7 @@ const Thankyou = () => {
                 className='mx-auto rounded-full mt-5'  
             />
             <hr className='border-1 border-gray-400 w-1/3 mx-auto mt-5'/>
-            <p className='text-sm mt-3 mx-8'>It is an honor and happiness for us, if you are willing to attend and give your blessing. For your presence and blessings, we thank you.</p>
+            <p className='text-sm mt-3 mx-8'>Suatu kehormatan dan kebahagiaan bagi kami, apabila bapak ibu bersedia hadir dan memberikan restunya. Atas kehadiran dan berkahnya kami ucapkan terima kasih.</p>
             <div className={alex.className}>
                 <h1 className='text-3xl mt-10' data-aos='fade-up'>
                     Ninda Aliyanda <br />
