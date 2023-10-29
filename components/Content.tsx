@@ -27,7 +27,7 @@ const Content = ({ title, content } : ContentProps) => {
         </div>
         <p className='px-3 mb-1 relative text-[14px]' data-aos="fade-right">
         Dengan segala hormat. <br />
-        Kami mengundang Bapak/Ibu/Adik/saya <br />
+        Kami mengundang Bapak/Ibu/Adik<br />
         serta sanak saudara untuk hadir <br />
         acara pernikahan kami:
         </p>
