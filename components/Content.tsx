@@ -26,10 +26,10 @@ const Content = ({ title, content } : ContentProps) => {
           <h2 className='text-[40px]'>Assalamulaiakum</h2>
         </div>
         <p className='px-3 mb-1 relative text-[14px]' data-aos="fade-right">
-        With all due respect. <br />
-        We invite Mr/Mrs/Sister/i  <br />
-        as well as relatives to attend <br />
-        our wedding event:
+        Dengan segala hormat. <br />
+        Kami mengundang Bapak/Ibu/Adik/saya <br />
+        serta sanak saudara untuk hadir <br />
+        acara pernikahan kami:
         </p>
         <div className="text-center mt-3 " data-aos='zoom-in'>
           <Image 
@@ -56,7 +56,7 @@ const Content = ({ title, content } : ContentProps) => {
           <div className={alex.className}>
             <h1 className='text-[25px] mt-3'>Ninda Aliyanda</h1>
           </div>
-          <p className='text-[14px] '>Putri Bapak Tatang Komentar (Alm) <br /> & Ibu Jueriah</p>
+          <p className='text-[14px] '>Putri Bapak Tatang Konendar (Alm) <br /> & Ibu Jueriah</p>
         </div>
       </div>
     </div>
