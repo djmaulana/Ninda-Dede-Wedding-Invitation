@@ -45,7 +45,7 @@ const Home: FC = () => {
   }
   return (
     <main className="overflow-hidden relative">
-      <div className='h-screen'>
+      <div className='min-h-screen'>
         <div className="absolute inset-0 mx-auto">
           <Image
               src="/hero-desktop.jpg"
@@ -62,8 +62,7 @@ const Home: FC = () => {
         </div>
         <div className=" relative z-10 flex flex-col p-5 text-left justify-end h-full">
             {/* <Music /> */}
-            <div className='bg-black p-5 rounded-[25px] bg-opacity-50'>
-
+            <div className='bg-black p-5 rounded-[25px] grid mt-80 bg-opacity-50 my-auto'>
               <h1 className="text-white">THE WEDDING OF</h1>
               <div className={alex.className}>
                 <h1 className='text-[40px] md:text-[120px] text-white'>
@@ -79,7 +78,7 @@ const Home: FC = () => {
                   <Link 
                     href='/invitation'
                   >
-                    <button onClick={handelMusic} className="bg-[#474747] mt-[30px] mb-[100px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                    <button onClick={handelMusic} className="bg-[#474747] mt-[30px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
                       Buka Undangan
                     </button>
                   </Link>
