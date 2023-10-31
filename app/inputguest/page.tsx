@@ -44,7 +44,7 @@ const inputguest = () => {
           Generate
         </button>
         {invitationLink && (
-          <p className='mt-3'>Link Undangan Anda: {invitationLink}</p>
+          <p className='mt-3'>Link Undangan Anda: <br />{invitationLink}</p>
           )}
       </div>
     </div>
