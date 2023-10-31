@@ -3,16 +3,23 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, FC } from 'react';
 import { Alex_Brush } from 'next/font/google';
 import Link from 'next/link';
+import { useSearchParams  } from 'next/navigation';
 // ..
 
 const alex = Alex_Brush({weight:'400', preload: false})
+
 // Ninda Aliyanda
 // Dede Saepul Dina
 
-export default function Home() {
+const Home: FC = () => {
+  const searchParams = useSearchParams()
+  let namaTamu = searchParams.get('guest')
+  if (namaTamu != null){
+    namaTamu = namaTamu.replace(/-/g, ' ');
+  }
 
   useEffect(() => {
     AOS.init({
@@ -27,6 +34,7 @@ export default function Home() {
   useEffect(() => {
     audio.current?.loop
   })
+
   const handelMusic = () => {
     if (isPlaying) {
       audio.current?.pause();
@@ -63,12 +71,13 @@ export default function Home() {
             <p className='font-light text-sm tracking-tighter md:text-[24px] text-white'>
               Kepada Bapak/Ibu/Saudara/i
             </p>
+            <p className='capitalize mt-5 text-lg text-white'>{namaTamu}</p>
             <div className={alex.className}>
               <div className="">
                 <Link 
                   href='/invitation'
                 >
-                  <button onClick={handelMusic} className="bg-[#474747] mt-[40px] mb-[100px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                  <button onClick={handelMusic} className="bg-[#474747] mt-[30px] mb-[100px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
                     Buka Undangan
                   </button>
                 </Link>
@@ -79,3 +88,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home;
