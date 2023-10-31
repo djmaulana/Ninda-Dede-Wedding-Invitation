@@ -78,7 +78,7 @@ const Home: FC = () => {
                   <Link 
                     href='/invitation'
                   >
-                    <button onClick={handelMusic} className="bg-[#474747] mt-[30px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                    <button onClick={handelMusic} className="bg-[#474747] mt-[30px] py-2 px-4 rounded-full w-40 text-center text-white text-[18px]">
                       Buka Undangan
                     </button>
                   </Link>
