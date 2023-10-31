@@ -62,25 +62,28 @@ const Home: FC = () => {
         </div>
         <div className=" relative z-10 flex flex-col p-5 text-left justify-end h-full">
             {/* <Music /> */}
-            <h1 className="text-white">THE WEDDING OF</h1>
-            <div className={alex.className}>
-              <h1 className='text-[40px] md:text-[120px] text-white'>
-                Ninda & Dede
-              </h1>
-            </div>
-            <p className='font-light text-sm tracking-tighter md:text-[24px] text-white'>
-              Kepada Bapak/Ibu/Saudara/i
-            </p>
-            <p className='capitalize mt-5 text-lg text-white'>{namaTamu}</p>
-            <div className={alex.className}>
-              <div className="">
-                <Link 
-                  href='/invitation'
-                >
-                  <button onClick={handelMusic} className="bg-[#474747] mt-[30px] mb-[100px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
-                    Buka Undangan
-                  </button>
-                </Link>
+            <div className='bg-black p-5 rounded-[25px] bg-opacity-50'>
+
+              <h1 className="text-white">THE WEDDING OF</h1>
+              <div className={alex.className}>
+                <h1 className='text-[40px] md:text-[120px] text-white'>
+                  Ninda & Dede
+                </h1>
+              </div>
+              <p className='font-light text-sm tracking-tighter md:text-[24px] text-white'>
+                Kepada Bapak/Ibu/Saudara/i
+              </p>
+              <p className='capitalize mt-5 text-lg text-white'>{namaTamu}</p>
+              <div className={alex.className}>
+                <div className="">
+                  <Link 
+                    href='/invitation'
+                  >
+                    <button onClick={handelMusic} className="bg-[#474747] mt-[30px] mb-[100px] py-2 px-4 md:hidden block rounded-full w-40 text-center text-white text-[18px]">
+                      Buka Undangan
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
         </div>
