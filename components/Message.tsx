@@ -78,7 +78,7 @@ const Message = () => {
     setIsConfirmed(false);
   };
 
-  console.log(submittedData)
+  // console.log(submittedData)
 
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;

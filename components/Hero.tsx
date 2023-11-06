@@ -34,6 +34,13 @@ const Hero = () => {
       const s = Math.floor((difference % (1000 * 60)) / 1000);
       setSeconds(s);
 
+      if (d && h && m && s < 0){
+        setDays(0)
+        setHours(0)
+        setMinutes(0)
+        setSeconds(0)
+      }
+
     }, 1000);
 
     return () => clearInterval(interval);
