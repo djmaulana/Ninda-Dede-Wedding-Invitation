@@ -33,30 +33,30 @@ const Content = ({ title, content } : ContentProps) => {
         </p>
         <div className="text-center mt-3 " data-aos='zoom-in'>
           <Image 
-            src='/img-men.jpg'
+            src='/men.jpg'
             alt='men'
             width={200}
             height={50}
-            className='rounded-full mx-auto saturate-50'
+            className='rounded-full mx-auto'
           />
           <div className={alex.className}>
-            <h1 className='text-[25px] mt-3'>Dede Saepul Dina</h1>
+            <h1 className='text-[25px] mt-3'>Naba Ababiel</h1>
           </div>
-          <p className='text-[14px] '>Putra Bapak Ijan <br /> & Ibu Eutik</p>
+          <p className='text-[14px] '>Putra Bapak Iman <br /> & Ibu Sri</p>
         </div>
         <p className='m-5'>&</p>
         <div className="text-center mt-3 " data-aos='zoom-in'>
           <Image 
-            src='/img-woman.jpg'
+            src='/woman.jpg'
             alt='men'
             width={200}
-            height={50}
-            className='rounded-full mx-auto saturate-50'
+            height={30}
+            className='rounded-full mx-auto'
           />
           <div className={alex.className}>
-            <h1 className='text-[25px] mt-3'>Ninda Aliyanda</h1>
+            <h1 className='text-[25px] mt-3'>Sabrina Latifah</h1>
           </div>
-          <p className='text-[14px] '>Putri Bapak Tatang Konendar (Alm) <br /> & Ibu Jueriah</p>
+          <p className='text-[14px] '>Putri Bapak Dede<br /> & Ibu Dewi</p>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const Thankyou = () => {
     <div className='w-screen mt-5'>
         <div className='p-5 bg-black bg-opacity-90 h-4/5 text-center text-gray-400'>
             <Image
-                src='/img-3.jpg'
+                src='/3.jpg'
                 alt='img'
                 width={150}
                 height={50}
@@ -28,9 +28,9 @@ const Thankyou = () => {
             <p className='text-sm mt-3 mx-8'>Suatu kehormatan dan kebahagiaan bagi kami, apabila bapak ibu bersedia hadir dan memberikan restunya. Atas kehadiran dan berkahnya kami ucapkan terima kasih.</p>
             <div className={alex.className}>
                 <h1 className='text-3xl mt-10' data-aos='fade-up'>
-                    Ninda Aliyanda <br />
+                    Sabrina Latifah <br />
                     & <br />
-                    Dede Saepul Dina
+                    Naba Ababiel
                 </h1>
             </div>
             <p className='text-[10px] mt-20'>Made with ♥ by djmaulana</p>
